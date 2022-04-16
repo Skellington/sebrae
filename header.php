@@ -1,8 +1,8 @@
 </head>
 <body>
 	<header id="header">
-			<div class="menu2" id="menu">
-				<div class="container">
+		<div class="menu2" id="menu">
+			<div class="container">
 				<div class="barra">
 					<div class="botoes">
 						<div class="menu-trigger" id="menu-trigger">
@@ -10,7 +10,7 @@
 							<label id="icone" class="icone" for="check"></label>
 							<span></span>
 						</div>
-						<a class="logo-principal" href="" alt="Sebrae Minas Gerais" title="Sebrae Minas Gerais"><img src="./assets/images/Sebrae.png" alt="Sebrae Minas Gerais"></a>
+						<a class="logo-principal" href="index.php" alt="Sebrae Minas Gerais" title="Sebrae Minas Gerais"><img src="./assets/images/Sebrae.png" alt="Sebrae Minas Gerais"></a>
 					</div>
 					
 					<div class="caixa-modais">
@@ -58,23 +58,23 @@
 					<div class="conteudo" id="menu-hidde">
 						<nav>
 							<ul>
-								<li><a href="">Mensagem da Administração</a></li>
-								<li><a href="">Sobre o Relatório</a></li>
+								<li><a href="mensagem-da-administracao.php">Mensagem da Administração</a></li>
+								<li><a href="sobre-relatorio.php">Sobre o Relatório</a></li>
 								<li><a href="">Informações Corporativas</a></li>
-								<li><a href="">Quem Somos</a></li>
+								<li><a href="quem-somos.php">Quem Somos</a></li>
 								<ul class="sub-menu">
-									<li><a href="">Governança Corporativa</a></li>
-									<li><a href="">Atendimento de Qualidade</a></li>
+									<li><a href="governanca-corporativa.php">Governança Corporativa</a></li>
+									<li><a href="atendimento-qualidade.php">Atendimento de Qualidade</a></li>
 								</ul>
-								<li><a href="">Planejamento Estratégico</a></li>
+								<li><a href="planejamento-estrategico.php">Planejamento Estratégico</a></li>
 								<ul class="sub-menu">
-									<li><a href="">Engajamento de Stakeholders</a></li>
-									<li><a href="">Nossa Gente</a></li>
+									<li><a href="engajamento-stakeholders.php">Engajamento de Stakeholders</a></li>
+									<li><a href="nossa-gente.php">Nossa Gente</a></li>
 								</ul>
-								<li><a href="">Desempenho do Ano</a></li>
+								<li><a href="desempenho-ano.php">Desempenho do Ano</a></li>
 								<ul class="sub-menu">
-									<li><a href="">Resultados Financeiros</a></li>
-									<li><a href="">Responsabilidade socioambiental</a></li>
+									<li><a href="resultados-financeiros.php">Resultados Financeiros</a></li>
+									<li><a href="responsabilidade-socioambiental.php">Responsabilidade socioambiental</a></li>
 								</ul>
 							</ul>							
 						</nav>
