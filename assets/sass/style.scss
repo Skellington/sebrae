@@ -10,11 +10,18 @@ body{
 h1, h2, h3, h4, h5, p, a, b, title{   
         font-family: Lato !important;
 }
-@media (min-width: 1200px){ 
-        .container {width: 1500px;  padding: 0;}
+@media (min-width: 1500px){ 
+        .container {
+                width: 1500px;  padding: 0;
+        }
 }
+
 .container {
         padding: 0;
+        @media screen and (max-width: 1500px) and (min-width: 100px) {
+                width: 100%;
+                padding: 0 20px;
+        } 
 }
 //Efeito Fadein
     .E-fadein{
@@ -137,7 +144,7 @@ header{
                                         z-index: 999;                         
                                         @media screen and (max-width: 460px) and (min-width: 220px) {                   
                                                 right: -40px;
-                                                top: -20px;
+                                                top: 22px;
                                         }
                                 }
 
@@ -206,6 +213,9 @@ header{
                                 display: flex;
                                 justify-content: center;
                                 align-items:center;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                        display: none;
+                                }
                                 .box{
                                         margin-left: 38px;
                                         display: flex;
@@ -329,10 +339,16 @@ footer{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                        display: block;
+                }
                 .box{
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                               margin-bottom: 20px;
+                        }
                         .pdf{
                                 display: flex;
                                 justify-content: center;
@@ -358,6 +374,7 @@ footer{
                 }
         }
 }
+
 .w3-modal{
         .w3-container{
                 background: #003FD8;
@@ -526,33 +543,61 @@ footer{
         }
 }
 
+.desktop{
+        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+               display: none;
+        }
+}
+.mobile{
+        display: none;
+        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+               display: block;
+        } 
+}
 .home{
         @extend .col-md-12;
         padding: 0 0 100px;          
         overflow: hidden;
+        @media screen and (max-width: 1000px) and (min-width: 100px) {
+               overflow: initial;
+                padding: 0 0 20px; 
+        } 
         .sustentabilidade{
                 @extend .col-md-12;
                 height: 756px;
                 margin-top: 160px;            
                 background: #84f4bc;
                 background: linear-gradient(45deg, #00f4bb 9%, #b8f088 38%, #ffee5d 60%);
+                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                       height: auto;
+                       margin-top: 60px;    
+                } 
                 .elementos-azul1{
                         position: absolute;
                         top: 0px;
                         left: -160px;
                         z-index: 9;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                display: none;
+                        } 
                 }
                 .elementos-branco{
                         position: absolute;
                         top: -110px;
                         left: 100px;
-                        z-index: 1; 
+                        z-index: 1;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                display: none;
+                        } 
                 }
                 .elementos-azul2{
                         position: absolute;
                         bottom: -40px;
                         left: -24px;
                         z-index: 9;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                display: none;
+                        } 
                 }
                 .container{
                         display: flex;
@@ -560,16 +605,31 @@ footer{
                         align-items: flex-start;
                         flex-direction: column;
                         height: 756px;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                height: auto;
+                        } 
                         .conteudo{
-                               padding: 220px 0 130px;
+                                padding: 220px 0 130px;
                                 position: relative;
                                 z-index: 99;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                        padding: 50px 0 50px;
+                                        top: 0px;
+                                } 
                         }
                         img{
                                 position: absolute;
                                 right: -0px;
                                 top: -70px;
                                 max-width: 100%;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                        bottom: 0px;
+                                        top: inherit;
+                                        position: relative;
+                                        right: -35px;
+                                        margin-bottom: -50px;
+                                        margin-top: -50px;
+                                }                             
                         }
                 }
                 h2{
@@ -577,6 +637,12 @@ footer{
                         text-align: left;
                         color: #0040D9;
                         font-weight: 700;
+                        @media screen and (max-width: 709px) and (min-width: 425px) {
+                               font-size: 40px;
+                        } 
+                        @media screen and (max-width: 425px) and (min-width: 100px) {
+                               font-size: 29px;
+                        } 
                         span{
                                 color: #3FBAFF;
                         }
@@ -597,6 +663,10 @@ footer{
                         -moz-box-shadow: 0px 0px 0px 0px #0040d9;
                         box-shadow: 0px 0px 0px 0px #0040d9;
                         transition: all .3s;
+                        @media screen and (max-width: 709px) and (min-width: 425px) {
+                                font-size: 11px;
+                                width: 140px;
+                        } 
                         span{
                                 transform: skewX(20deg);
                         }
@@ -612,29 +682,45 @@ footer{
                 height: 766px;
                 margin-top: 95px;
                 background: linear-gradient(45deg, #faa 10%, #f69fb4 49%, #cc5be8 73%);
+                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                        margin-top: 70px;
+                        height: auto;
+                } 
                 .elementos-azul1{
                         position: absolute;
                         right: -8%;
                         top: 0;
                         z-index: 9;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                              display: none;
+                        }
                 }
                 .elementos-branco{
                         position: absolute;
                         top: -20px;
                         left: 60%;
                         z-index: 1; 
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                              display: none;
+                        }
                 }
                 .elementos-branco2{
                         position: absolute;
                         bottom: -10px;
                         right: 45%;
-                        z-index: 1; 
+                        z-index: 1;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                              display: none;
+                        } 
                 }
                 .elementos-azul2{
                         position: absolute;
                         bottom: -40px;
                         right: -17%;
                         z-index: 9;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                              display: none;
+                        } 
                 }
                 .container{
                         display: flex;
@@ -642,11 +728,22 @@ footer{
                         align-items: flex-start;
                         flex-direction: column;
                         height: 786px;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                height: auto;
+                                flex-direction: column-reverse;
+                        } 
                         .imagem{
                                 position: absolute;
                                 left: -0px;
                                 top: -60px;                               
                                 z-index: 99;
+                                @media screen and (max-width: 709px) and (min-width: 100px) {
+                                        position: relative;
+                                        bottom: 0px;
+                                        left: -40px;
+                                        top: inherit;
+                                        margin-bottom: -54px;
+                                }
                                 img{
                                      max-width: 100%;    
                                 }
@@ -657,6 +754,11 @@ footer{
                                 transform: translate(-50%, -50%);
                                 z-index: 99;
                                 right: 2%;
+                                @media screen and (max-width: 709px) and (min-width: 100px) {
+                                        position: relative;
+                                        padding-top: 20px;
+                                        transform: translate(0);
+                                }
                                 h2{
                                         font-size: 70px;
                                         text-align: left;
@@ -664,7 +766,15 @@ footer{
                                         font-weight: 700;
                                         font-style: italic;
                                         position: relative;
-                                        left: -120px;                                        
+                                        left: -120px; 
+                                        @media screen and (max-width: 709px) and (min-width: 425px) {
+                                               font-size: 40px;
+                                               left: 0;
+                                        } 
+                                        @media screen and (max-width: 425px) and (min-width: 100px) {
+                                               font-size: 29px;
+                                                left: 0;
+                                        }                                        
                                 }
                                 .texto{
                                         display: flex;
@@ -672,6 +782,11 @@ footer{
                                         align-items: end;
                                         flex-direction: column;
                                         width: 430px;
+                                        @media screen and (max-width: 709px) and (min-width: 100px) {
+                                                width: 100%;
+                                                justify-content: center;
+                                                align-items: center;
+                                        }
                                 }
                                 p{
                                         font-size: 16px;
@@ -679,6 +794,10 @@ footer{
                                         text-align: right;
                                         font-weight: 700;
                                         margin: 35px 0;
+                                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                                margin: 10px 0;
+                                                text-align: left;
+                                        } 
                                 }
                                 i{
                                         font-size: 16px;                                       
@@ -724,17 +843,28 @@ footer{
                 height: 890px;
                 margin-top: 95px;
                 padding: 40px 0;
+                @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                       height: auto;
+                }
                 .container{
-                            display: flex;
-                            justify-content: center;
-                            align-items: flex-start;
-                            position: relative;
-                            height: 890px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        position: relative;
+                        height: 890px;
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                height: auto;
+                                flex-direction: column;
+                                padding: 0;
+                        }
                 }
                 .conteudo{
                         @extend .col-md-5;
                         padding: 0px;
                         padding-right: 30px;
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                               padding: 60px 20px 0;
+                        }
                         h2{
                                 font-size: 52px;
                                 text-align: left;
@@ -742,7 +872,11 @@ footer{
                                 font-weight: 700;
                                 font-style: italic;
                                 position: relative; 
-                                margin-bottom: 20px;                                                            
+                                margin-bottom: 20px;  
+                                @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                        font-size: 30px;
+                                        text-align: center;
+                                }                                                          
                         }                        
                         p{
                                 font-size: 18px;
@@ -772,6 +906,9 @@ footer{
                                 -moz-box-shadow: 0px 0px 0px 0px #0040d9;
                                 box-shadow: 0px 0px 0px 0px #0040d9;
                                 transition: all .3s;
+                                @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                      margin: 35px 0 0;
+                                }
                                 span{
                                         transform: skewX(20deg);
                                 }
@@ -782,26 +919,50 @@ footer{
                                 }
                         }     
                 }
+                .mapa{
+                        width: 115%;
+                        height: auto;
+                        left: -40px;
+                        top: -80px;
+                        position: relative;
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                width: 100%;
+                                height: auto;
+                                left: 0px;
+                                top: 0;
+                                position: relative;
+                                max-width: 100%;
+                        }
+
+                }        
                 .tds-box{
                         @extend .col-md-6, .col-md-offset-1;
-                        .mapa{
-                                width: 115%;
-                                height: auto;
-                                left: -40px;
-                                top: -80px;
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                background: #fff;
+                                padding: 0;
+                                width: 100%;
+                                border-top: #003fd8 43px solid;                               
+                                padding-top: 15px;
                                 position: relative;
-                        }                      
+                                bottom: -50px;
+                        }                                      
                         .box{
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
                                 margin-top: 50px;
+                                @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                      flex-direction: column;
+                                }
                                 a{
                                         @extend .col-md-6;
                                         display: flex;
                                         justify-content: center;
                                         align-items: flex-start;
                                         text-decoration: none;
+                                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                                margin-bottom: 20px;
+                                        }
                                         h3{
                                                 margin-top: 0;
                                                 font-size: 26px;
@@ -827,24 +988,42 @@ footer{
         .planejamento{
                 @extend .col-md-12;
                 margin: 60px 0 150px;               
-                height: 740px;                          
+                height: 740px;
+                @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column-reverse;
+                        padding: 0;
+                        margin: 60px 0 20px;
+                }                          
                 .elementos-azul1{
                         position: absolute;
                         right: -18%;
                         top: 0;
                         z-index: 9;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                              display: none;
+                        } 
                 }
                 .elementos-azul2{
                         position: absolute;
                         right: 0%;
                         bottom: -10%;
                         z-index: 9;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                              display: none;
+                        } 
                 }
                 .elementos-branco{
                         position: absolute;
                         top: -20px;
                         right: -8%;
                         z-index: 1; 
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                              display: none;
+                        } 
                 }
                 .imagem{
                         position: absolute;
@@ -852,6 +1031,17 @@ footer{
                         top: 46%;
                         transform: translateY(-50%);
                         z-index: 99;
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                              display: none;
+                        }
+                        img{
+                                max-width: 100%;
+                        }
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                position: relative;
+                                top: initial;
+                                transform: initial;
+                        }
                 }
                 .container{
                         background-image: url(../images/fundo-planejamento.png);           
@@ -865,12 +1055,21 @@ footer{
                         position: relative;
                         height: 740px;
                         padding: 40px 0;
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                height: auto;
+                                padding: 0;
+                        }
                 }
                 .conteudo{
                         @extend .col-md-5;
                         padding: 0px;
                         padding-right: 30px;
                         right: 20%;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                              right: 0;
+                              width: 100%;
+                              padding: 20px;
+                        }
                         h2{
                                 font-size: 52px;
                                 text-align: left;
@@ -878,7 +1077,10 @@ footer{
                                 font-weight: 700;
                                 font-style: italic;
                                 position: relative; 
-                                margin-bottom: 15px;                                                            
+                                margin-bottom: 15px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                       font-size: 30px;
+                                }                                                            
                         }                        
                         p{
                                 font-size: 16px;
@@ -895,6 +1097,9 @@ footer{
                                 justify-content: center;
                                 align-items: center;
                                 margin: 15px 0;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                       width: 100%
+                                }
                         }
                         b{
                                 font-size: 16px;                                       
@@ -926,18 +1131,7 @@ footer{
                                         box-shadow: 5px 5px 0px 0px #0040d9;                               
                                 }
                         }     
-                }
-                .tds-box{
-                        @extend .col-md-6;
-                        .mapa{
-                                width: 115%;
-                                height: auto;
-                                left: -40px;
-                                top: -80px;
-                                position: relative;
-                        }                      
-                       
-                }
+                }               
                 .box{
                         @extend .col-md-12;
                         display: flex;
@@ -945,18 +1139,36 @@ footer{
                         align-items: center;
                         margin-top: 90px;
                         z-index: 99;
+                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                flex-direction: column;
+                                margin-top: 10px;
+                                background: #fff;
+                                padding: 0;
+                                width: 100%;
+                                border-top: #003fd8 43px solid;                               
+                                padding-top: 50px;
+                                position: relative;
+                                bottom: -50px;
+                        }
                         a{                                
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 text-decoration: none;
                                 margin-right: 30px;
+                                @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                        margin-right: 0px;
+                                        margin-bottom: 20px;
+                                }
                                 h3{
                                         margin-top: 0;
                                         font-size: 26px;
                                         color: #0040D9;
                                         font-weight: 700;
                                         transition: all .3s;
+                                        @media screen and (max-width: 820px) and (min-width: 220px) {                   
+                                                 font-size: 20px;
+                                        }
                                 }
                                 img{                                        
                                         max-width: 100%;
@@ -992,7 +1204,10 @@ footer{
                                 font-weight: 700;
                                 font-style: italic;
                                 position: relative; 
-                                margin-bottom: 15px;                                                            
+                                margin-bottom: 15px; 
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                       font-size: 30px;
+                                }                                                            
                         }                        
                         p{
                                 font-size: 18px;
@@ -1000,6 +1215,9 @@ footer{
                                 text-align: left;
                                 font-weight: 400;
                                 margin: 10px 0;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                       font-size: 16px;
+                                } 
                         }
                         
                         b{
@@ -1011,21 +1229,36 @@ footer{
                 .imagem{
                         @extend .col-md-8, .col-md-offset-1;                       
                         position: relative;
-                        margin-top: 40px; 
+                        margin-top: 40px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                      margin-top: 10px;
+                                      width: 100%;
+                                }   
                         img{
-                             width: 80%;   
+                                width: 80%;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                      width: 100%;
+                                }    
                         }                   
                 }   
         }
         .resultados{
                 @extend .col-md-12;
                 margin-top: 100px;
+                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                        padding: 0;
+                }
                 .container{
                         display: flex;
                         justify-content: space-evenly;
                         align-items: center;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                overflow: hidden;
+                                flex-direction: column;
+                                padding: 0;
+                        } 
                 }
-                .box{                        
+                .box{
                         background-image: url(../images/fundo-resultado.png);           
                         background-repeat: no-repeat;
                         background-position: center;
@@ -1037,26 +1270,42 @@ footer{
                         padding: 0px 50px;
                         height: 703px;
                         width: 525px;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                margin-bottom: 40px;
+                                width: 100%;
+                        }
                         img{
                                 position: relative;                                
                         }
                         .foto1{
                                 top: -50px; 
                                 left: 50px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                         left: -50px;
+                                } 
                         }
                         .foto2{
                                 top: -60px; 
                                 left: 70px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                         left: -50px;
+                                } 
                         }
                         .texto{
-                            position: relative;
-                            top: -30px;
-                            padding: 0px 90px 0 40px;     
+                                position: relative;
+                                top: -30px;
+                                padding: 0px 90px 0 40px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                        padding: 0px 0px 0 0px;
+                                }     
                         }
                         h2{
                                 color: #0040D9;
                                 font-size: 40px;
                                 font-weight: 800;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                       font-size: 35px;
+                                }
                         }
                         h3{
                                 color: #000;
@@ -1107,12 +1356,18 @@ footer{
                 @extend .col-md-12;
                 position:relative;
                 padding: 0;
-                margin-top: 90px; 
+                margin-top: 70px; 
+                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                         /*margin-top: 90px; */
+                }
                 .titulo{
                         @extend .col-md-12;
                         position:relative;
                         padding: 0;
                         background: linear-gradient(45deg, #faa 10%, #f69fb4 49%, #cc5be8 73%); 
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                padding: 60px 20px;
+                        }
                         &:before{
                                 content: "";
                                 background: #fff;
@@ -1122,6 +1377,32 @@ footer{
                                 width: 9%;
                                 position: absolute;
                                 z-index: 1;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                        display: none;
+
+                                }
+                        }
+                        .elementos-branco{
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                        position: absolute;
+                                        top: 14%;
+                                        z-index: 99;
+                                        right: -200%;
+                                        img{
+                                                width: 80%;
+                                        }
+                                }
+                        }
+                        .elementos-branco1{
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                        position: absolute;
+                                        top: 35%;
+                                        z-index: 99;
+                                        left: -12%;
+                                        img{
+                                                width: 140%;
+                                        }
+                                }
                         }
                         .box{
                                 h1{
@@ -1130,12 +1411,18 @@ footer{
                                         color: #0040D9;
                                         font-weight: 700;
                                         font-style: italic;
-                                        margin-top: 70px;                              
+                                        margin-top: 70px; 
+                                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                               font-size: 40px;
+                                        }                             
                                 }
                                 p{
                                         font-size: 20px;
                                         color: #0040D9;
                                         margin-bottom: 100px;
+                                        @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                                margin-bottom: 0px;
+                                        }
                                 }
                         }
                         .elementos-azul1{
@@ -1154,6 +1441,12 @@ footer{
                         right: 0;
                         top: 0;
                         z-index: 99;
+                        img{
+                                max-width: 100%;
+                        }
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                               position: relative;
+                        }
                 }
                 .texto{
                         @extend .col-md-12;
@@ -1171,6 +1464,9 @@ footer{
                                 font-size: 25px; 
                                 color: #0040D9; 
                                 font-weight: 700;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                         font-size: 22px; 
+                                }
                         }  
                 }
                 .elementos-azul2{
@@ -1178,6 +1474,9 @@ footer{
                         z-index: 99;
                         right: -10%;
                         bottom: 25%;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                               display: none;
+                        }
                 }
         }
         .conteudo{
@@ -1186,6 +1485,9 @@ footer{
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
+                @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                        padding: 0px;
+                }
                 article{
                         @extend .col-md-8;
                         background: #fff;
@@ -1195,20 +1497,38 @@ footer{
                         -moz-box-shadow: 30px 30px 0px 0px #0040d9;
                         box-shadow: 30px 30px 0px 0px #0040d9;
                         border: 1px solid #3FBAFF;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                padding: 60px 20px;
+                                margin: 0 40px;
+                        }
                         p{
                                 font-size: 20px;
                                 color: #707070;
                                 margin-bottom: 20px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                       font-size: 18px;
+                                }
                         }
                         li, a, b{
                                 font-size: 20px;
                                 color: #707070;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                       font-size: 18px;
+                                }
                         }
                         h3{
                                 font-weight: 700;
                                 color: #707070;
                                 margin-bottom: 0;
                         }
+                        img{
+                                max-width: 100%;
+                        }
+                }
+                .container{
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                padding: 0px;
+                        }     
                 }
                 aside{
                         @extend .col-md-4;
@@ -1221,8 +1541,17 @@ footer{
                         width: 500px;
                         top: 160px;
                         left: -10%;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                background: linear-gradient(45deg, #ffa478 9%, #ff796b 38%, #ff6162 60%);
+                                width: 100%;                               
+                                left: 0;
+                                padding: 0;
+                        }
                         .texto{
                                 padding: 20px 110px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                        padding: 20px;
+                                }
                                 h3{
                                         font-size: 20px;
                                         text-align: left;
@@ -1242,13 +1571,22 @@ footer{
                                 align-items: flex-start;
                                 position: relative;
                                 left: -25px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                       left: 0;
+                                }
                                 svg{
                                         width: 150px;
                                         height: 45px;
+                                        @media screen and (max-width: 1000px) and (min-width: 100px) {   
+                                            width: 100px;
+                                        }
                                 }
                                 div{
                                         margin-left: 10px;
                                         padding-right: 80px;
+                                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                                padding-right: 10px;
+                                        }
                                         h4{
                                                 font-size: 16px;
                                                 text-align: left;
