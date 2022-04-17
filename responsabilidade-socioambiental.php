@@ -7,15 +7,18 @@
 				<span class="elementos-branco">
 					<img src="./assets/images/grupo2.png">
 				</span>
+				<div class="imagem mobile">
+					<img src="./assets/images/mensagem.png">
+				</div>
 				<div class="box container">
 					<h1>Responsabilidade<br>socioambiental</h1>
 					<p>XXX 000-00</p>
-				</div>
+				</div>				
 				<span class="elementos-azul1">
 					
 				</span>
 			</article>
-			<div class="imagem">
+			<div class="imagem desktop">
 				<img src="./assets/images/mensagem.png">
 			</div>
 			<article class="texto">

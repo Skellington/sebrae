@@ -7,6 +7,9 @@
 				<span class="elementos-branco">
 					<img src="./assets/images/grupo2.png">
 				</span>
+				<div class="imagem mobile">
+					<img src="./assets/images/mensagem.png">
+				</div>
 				<div class="box container">
 					<h1>Engajamento de <br>stakeholders</h1>
 					<p>XXX 000-00</p>
@@ -15,7 +18,7 @@
 					
 				</span>
 			</article>
-			<div class="imagem">
+			<div class="imagem desktop">
 				<img src="./assets/images/mensagem.png">
 			</div>
 			<article class="texto">

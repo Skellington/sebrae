@@ -82,14 +82,16 @@
 		<section class="quem-somos">
 			<article class="container">
 				<div class="conteudo">
-					<h2>Quem<br>Somos</h2>
+					<h2 class="desktop">Quem<br>Somos</h2>
+					<h2 class="mobile">Quem Somos</h2>
+					<img class="mapa mobile" src="./assets/images/mapa.png">
 					<p>	Serviço de Apoio às Micro e Pequenas Empresas de Minas Gerais (Sebrae Minas) é uma entidade associativa de direito privado, sem fins lucrativos. Foi instituída como um serviço social autônomo com o objetivo de fomentar o desenvolvimento sustentável, a competitividade e o aperfeiçoamento técnico das microempresas e das empresas de pequeno porte industriais, comerciais e de serviços. Com sede em Belo Horizonte, faz parte do Sistema Sebrae e abrange os 853 municípios do estado, com nove sedes regionais e 55 microrregiões.</p>
 					<p>No âmbito do Suporte Empresarial, oferece orientação a quem quer abrir, ampliar, diversificar ou recuperar um pequeno negócio nas áreas industriais, comerciais, agrícolas e de serviço. Na linha do Desenvolvimento Econômico, o Sebrae participa da construção de políticas públicas que promovam um ambiente mais favorável ao surgimento e crescimento das micro e pequenas empresas. Seu propósito é “Impulsionar o empreendedorismo para transformar vidas”.</p>
 					<b>Saiba mais sobre o Sebrae Minas e suas regionais no <br>Relatório de Sustentabilidade 2021</b>
 					<a class="botao" href="quem-somos.php"><span>SAIBA MAIS</span></a>
 				</div>
 				<div class="tds-box">
-					<img class="mapa" src="./assets/images/mapa.png">
+					<img class="mapa desktop" src="./assets/images/mapa.png">
 					<div class="box">
 						<a href="governanca-corporativa.php">
 							<h3>Governança<br>Corporativo</h3>
