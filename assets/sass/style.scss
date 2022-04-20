@@ -1326,8 +1326,7 @@ footer{
                                 width: 100%;
                                 max-width: 100%;
                         }                   
-                }
-               
+                }   
         }
         .resultados{
                 @extend .col-md-12;
@@ -1339,8 +1338,7 @@ footer{
                         display: flex;
                         justify-content: space-evenly;
                         align-items: center;
-                        @media screen and (max-width: 1000px) and (min-width: 100px) {
-                                overflow: hidden;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                               
                                 flex-direction: column;
                                 padding: 0;
                         } 
@@ -1353,22 +1351,20 @@ footer{
                         display: flex;
                         justify-content: center;
                         align-items: flex-start;
-                        flex-direction: column;
                         padding: 0px 50px;
-                        height: 703px;
-                        width: 525px;
                         @media screen and (max-width: 1000px) and (min-width: 100px) {                       
                                 margin-bottom: 40px;
                                 width: 100%;
+                                flex-direction: column;
                         }
                         img{
                                 position: relative;                                
                         }
                         .foto1{
                                 top: -50px; 
-                                left: 50px;
+                                left: 0px;
                                 @media screen and (max-width: 1000px) and (min-width: 100px) {                       
-                                         left: -50px;
+                                        left: -50px;
                                 } 
                         }
                         .foto2{
@@ -1380,7 +1376,7 @@ footer{
                         }
                         .texto{
                                 position: relative;
-                                top: -30px;
+                                top: 0px;
                                 padding: 0px 90px 0 40px;
                                 @media screen and (max-width: 1000px) and (min-width: 100px) {                       
                                         padding: 0px 0px 0 0px;
@@ -1391,12 +1387,15 @@ footer{
                                 font-size: 40px;
                                 font-weight: 800;
                                 @media screen and (max-width: 1000px) and (min-width: 100px) {                       
-                                       font-size: 35px;
+                                       font-size: 30px;
                                 }
                         }
                         h3{
                                 color: #000;
                                 font-size: 36px;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                       font-size: 26px;
+                                }
                         }
                         p{
                                 color: #000;
@@ -1419,7 +1418,7 @@ footer{
                                 -moz-box-shadow: 0px 0px 0px 0px #0040d9;
                                 box-shadow: 0px 0px 0px 0px #0040d9;
                                 transition: all .3s;
-                                right: -39%;
+                                right: 0%;
                                 bottom: -35px;
                                 position: relative;
                                 span{
@@ -1432,6 +1431,105 @@ footer{
                                 }
                         } 
                 }
+        }
+        .ambiental{
+                @extend .col-md-12;
+                margin-top: 100px;
+                background: linear-gradient(45deg, #faa 10%, #f69fb4 49%, #cc5be8 73%);
+                @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                       margin-top: 50px;
+                }
+                .container{
+                        position: relative;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                       
+                                flex-direction: column-reverse;
+                        }
+                }
+                .conteudo{
+                        @extend .col-md-5;
+                        padding: 50px 0;
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                             
+                                padding: 50px 0 0;
+                        }                     
+                        h2{
+                                font-size: 52px;
+                                text-align: left;
+                                color: #0040D9;
+                                font-weight: 700;
+                                font-style: italic;
+                                position: relative; 
+                                margin-bottom: 15px; 
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                       font-size: 30px;
+                                }                                                            
+                        }                        
+                        p{
+                                font-size: 18px;
+                                color: #000;
+                                text-align: left;
+                                font-weight: 400;
+                                margin: 10px 0;
+                                @media screen and (max-width: 1000px) and (min-width: 100px) {
+                                       font-size: 16px;
+                                } 
+                        }
+                        
+                        b{
+                                font-size: 16px;                                       
+                                color: #000;
+                                text-align: left; 
+                        } 
+                        .botao{
+                                background: #0040D9;
+                                font-size: 16px;
+                                color: #fff;
+                                width: 210px;
+                                height: 35px;
+                                margin: 35px 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transform: skewX(-20deg);
+                                text-decoration: none;
+                                -webkit-box-shadow: 0px 0px 0px 0px #0040d9;
+                                -moz-box-shadow: 0px 0px 0px 0px #0040d9;
+                                box-shadow: 0px 0px 0px 0px #0040d9;
+                                transition: all .3s;
+                                @media screen and (max-width:1000px) and (min-width: 425px) {
+                                        font-size: 11px;
+                                        width: 140px;
+                                } 
+                                span{
+                                        transform: skewX(20deg);
+                                }
+                                &:hover{
+                                        transition: all .3s;
+                                        background: #3FBAFF;
+                                        box-shadow: 5px 5px 0px 0px #0040d9;                               
+                                }
+                        }                             
+                }  
+                .imagem{
+                        position: absolute;
+                        left: 0;
+                        top: -50px;   
+                        @media screen and (max-width: 1215px) and (min-width: 1001px) {                       
+                                left: -95px;
+                                top: -9px;
+                        }                     
+                        @media screen and (max-width: 1000px) and (min-width: 100px) {                             
+                                width: 100%;
+                                position: initial;
+                                padding-bottom: 50px;
+                        }   
+                        img{
+                                width: 100%;
+                                max-width: 100%;
+                        }                   
+                }   
         }
 }
 
